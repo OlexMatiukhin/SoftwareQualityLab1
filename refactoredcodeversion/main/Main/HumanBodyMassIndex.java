@@ -28,19 +28,18 @@ public class HumanBodyMassIndex {
     }
 
     public  double getHumanBodyMassIndex() {
-        return weight/(height*height);
+        return weight / (height*height);
     }
     
     public  String getResult() {
-        String resultString = "";
         if (getHumanBodyMassIndex() >= 18.5 & getHumanBodyMassIndex() < 25) {
             return "Norm";
         } else if (getHumanBodyMassIndex() >= 25 & getHumanBodyMassIndex() < 30) {
             return "Warning! ";
         } else if (getHumanBodyMassIndex() >= 30) {
-            resultString = "Fat";
+            return "Fat";
         }
-        return resultString = "Deficit";
+        return "Deficit";
     }
 
 
